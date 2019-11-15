@@ -6,4 +6,9 @@ router.get('/', function(req, res, next) {
     res.send('Hello world!');
 });
 
+/* OPTIONS pre-flight. */
+router.options('/', function(req, res, next) {
+    res.send('Hello world!');
+});
+
 module.exports = router;

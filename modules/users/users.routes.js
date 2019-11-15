@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
     res.json(req.session);
 });
 
-router.get('/login', function(req, res, next) {
+router.post('/login', function(req, res, next) {
     // Can't use async/await when trying to get header information.
     // More importantly the set-cookie attribute.
     req.db.request({

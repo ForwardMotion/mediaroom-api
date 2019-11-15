@@ -4,6 +4,9 @@ if (process.env.NODE_ENV !== 'production') {
 
 const db_path =  `http://${process.env.USERS_DB_USERNAME}:${process.env.USERS_DB_PASSWORD}@${process.env.USERS_DB_HOST}:${process.env.USERS_DB_PORT}`;
 
+/*
+ * This middleware authenticates the user.
+ */
 module.exports = async function(req, res, next) {
     var auth_cookie = req.cookies['AuthSession'];
     if (auth_cookie) {
